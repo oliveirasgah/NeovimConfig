@@ -15,4 +15,3 @@ require("user.comment")
 require("user.gitsigns")
 require("user.bufferline")
 require("user.lualine")
-

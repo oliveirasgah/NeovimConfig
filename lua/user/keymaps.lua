@@ -49,6 +49,15 @@ keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 -- Close current buffer
 keymap("n", "<leader>bd", ":bdelete<CR>", opts)
 
+-- Format code
+keymap("n", "<leader>F", function()
+    require("conform").format({
+        lsp_fallback = true,
+        async = false,
+        timeout_ms = 500,
+    })
+end, opts)
+
 -- Insert mode --
 -- Press jk fast to exti insert mode
 keymap("i", "jk", "<ESC>", opts)
@@ -78,11 +87,20 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Telescope --
-keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
-keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false , hidden = true }))<CR>", opts)
+keymap(
+    "n",
+    "<leader>ff",
+    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
+    opts
+)
+keymap(
+    "n",
+    "<leader>fh",
+    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false , hidden = true }))<CR>",
+    opts
+)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 
 -- Gitsigns --
 keymap("n", "<leader>vb", ":Gitsigns blame_line<CR>")
 keymap("n", "<leader>vp", ":Gitsigns preview_hunk<CR>")
-
