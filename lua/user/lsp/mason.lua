@@ -1,4 +1,6 @@
 local servers = {
+  "eslint",
+  "cssls",
   "html",
   "emmet_ls",
   "lua_ls",
