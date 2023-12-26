@@ -79,3 +79,7 @@ keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files(requ
 keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false , hidden = true }))<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 
+-- Gitsigns --
+keymap("n", "<leader>vb", ":Gitsigns blame_line<CR>")
+keymap("n", "<leader>vp", ":Gitsigns preview_hunk<CR>")
+

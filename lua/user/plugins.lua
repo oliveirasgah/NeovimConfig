@@ -81,6 +81,10 @@ return packer.startup(function(use)
 
   -- Comments
   use "numToStr/Comment.nvim"
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 
   -- Set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then

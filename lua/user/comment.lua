@@ -4,6 +4,18 @@ if not status_ok then
   return
 end
 
+local context_status_ok, context_comment = pcall(require, "ts_context_commentstring")
+
+if not context_status_ok then
+  return
+end
+
+local context_integration = require("ts_context_commentstring.integrations.comment_nvim")
+
+context_comment.setup {
+  enable_autocmd = false
+}
+
 comment.setup {
   padding = true,
   sticky = true,
@@ -25,7 +37,7 @@ comment.setup {
     basic = true,
     extra = true
   },
-  pre_hook = nil,
+  pre_hook = context_integration.create_pre_hook(),
   post_hook = nil
 }
 
