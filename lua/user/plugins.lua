@@ -76,6 +76,9 @@ return packer.startup(function(use)
   -- Treesitter
   use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
 
+  -- Autopairs
+  use "windwp/nvim-autopairs"
+
   -- Set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
