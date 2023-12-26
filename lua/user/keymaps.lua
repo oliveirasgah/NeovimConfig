@@ -46,6 +46,9 @@ keymap("n", "J", "mzJ`z", opts)
 -- Replace in current word
 keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
 
+-- Close current buffer
+keymap("n", "<leader>bd", ":bdelete<CR>", opts)
+
 -- Insert mode --
 -- Press jk fast to exti insert mode
 keymap("i", "jk", "<ESC>", opts)

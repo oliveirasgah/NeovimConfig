@@ -86,6 +86,12 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
+  -- Bufferline
+  use "akinsho/bufferline.nvim"
+  
+  -- Status line
+  use "nvim-lualine/lualine.nvim"
+
   -- Set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
