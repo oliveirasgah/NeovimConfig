@@ -38,7 +38,7 @@ keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
 -- Open file browser
-keymap("n", "<leader>e", ":Lex 30<CR>", opts)
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Cursor stay in place after moving line
 keymap("n", "J", "mzJ`z", opts)
@@ -57,15 +57,15 @@ keymap("v", "<", "<gv^", opts)
 keymap("v", ">", ">gv^", opts)
 
 -- Move selection up and down
-keymap("v", "<A-j>", ">+1<CR>gv=gv", opts)
-keymap("v", "<A-k>", "<-2<CR>gv=gv", opts)
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Paste text only yanked, not removed
 keymap("x", "<leader>p", '"_dP', opts)
 
 -- Move selection block up and down
-keymap("x", "<A-j>", ">+1<CR>gv=gv", opts)
-keymap("x", "<A-k>", "<-2<CR>gv=gv", opts)
+keymap("x", "<A-j>", ":m '>+1<CR>gv=gv", opts)
+keymap("x", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
 -- Terminal mode --
 -- Better terminal navigation
@@ -77,6 +77,5 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Telescope --
 keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>", opts)
 keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false , hidden = true }))<CR>", opts)
-keymap("n", "<leader>fb", "<cmd>lua require('telescope').extensions.file_browser.file_browser()<CR>", opts)
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
 
