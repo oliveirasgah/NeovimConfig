@@ -1,4 +1,6 @@
 local servers = {
+  "html",
+  "emmet_ls",
   "lua_ls",
   "jsonls"
 }
