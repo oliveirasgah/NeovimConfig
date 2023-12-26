@@ -79,6 +79,9 @@ return packer.startup(function(use)
   -- Autopairs
   use "windwp/nvim-autopairs"
 
+  -- Comments
+  use "numToStr/Comment.nvim"
+
   -- Set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()

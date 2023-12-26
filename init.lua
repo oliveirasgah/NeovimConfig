@@ -11,4 +11,5 @@ require("user.lsp")
 require("user.telescope")
 require("user.nvim-tree")
 require("user.autopairs")
+require("user.comment")
 
