@@ -2,6 +2,7 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Adding imports
 require("user.options")
 require("user.keymaps")
 require("user.plugins")
@@ -15,3 +16,4 @@ require("user.comment")
 require("user.gitsigns")
 require("user.bufferline")
 require("user.lualine")
+require("user.toggleterm")

@@ -109,6 +109,15 @@ return packer.startup(function(use)
     end,
   })
 
+  -- Toggleterm
+  --[[ use({
+    "akinsho/toggleterm.nvim",
+    config = function ()
+      require("toggleterm").setup()
+    end
+  }) ]]
+  use "akinsho/toggleterm.nvim"
+
   -- Set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
