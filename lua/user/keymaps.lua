@@ -37,6 +37,15 @@ keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
+-- Open file browser
+keymap("n", "<leader>e", ":Lex 30<CR>", opts)
+
+-- Cursor stay in place after moving line
+keymap("n", "J", "mzJ`z", opts)
+
+-- Replace in current word
+keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], opts)
+
 -- Insert mode --
 -- Press jk fast to exti insert mode
 keymap("i", "jk", "<ESC>", opts)
@@ -52,7 +61,7 @@ keymap("v", "<A-j>", ">+1<CR>gv=gv", opts)
 keymap("v", "<A-k>", "<-2<CR>gv=gv", opts)
 
 -- Paste text only yanked, not removed
-keymap("v", "p", '"_dP', opts)
+keymap("x", "<leader>p", '"_dP', opts)
 
 -- Move selection block up and down
 keymap("x", "<A-j>", ">+1<CR>gv=gv", opts)
