@@ -1,4 +1,7 @@
 local servers = {
+  "sqls",
+  "jdtls",
+  "tsserver",
   "eslint",
   "cssls",
   "html",
