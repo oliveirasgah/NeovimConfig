@@ -7,7 +7,8 @@ local servers = {
   "html",
   "emmet_ls",
   "lua_ls",
-  "jsonls"
+  "jsonls",
+  "gopls"
 }
 
 local settings = {
