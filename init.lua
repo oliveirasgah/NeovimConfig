@@ -6,6 +6,8 @@ vim.g.loaded_netrwPlugin = 1
 require("user.options")
 require("user.keymaps")
 require("user.plugins")
+require("user.treesitter")
+require("user.filetypes")
 require("user.colorscheme")
 require("user.cmp")
 require("user.lsp")

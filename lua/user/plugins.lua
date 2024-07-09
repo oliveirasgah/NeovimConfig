@@ -75,6 +75,7 @@ return packer.startup(function(use)
 
     -- Treesitter
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
+    use("vrischmann/tree-sitter-templ", { run = ":TSInstall templ" })
 
     -- Autopairs
     use("windwp/nvim-autopairs")

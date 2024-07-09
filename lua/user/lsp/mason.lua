@@ -10,7 +10,8 @@ local servers = {
     "jsonls",
     "gopls",
     "htmx",
-    "templ"
+    "templ",
+    "pyright"
 }
 
 local settings = {
