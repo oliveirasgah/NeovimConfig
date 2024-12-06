@@ -11,7 +11,8 @@ local servers = {
     "gopls",
     "htmx",
     "templ",
-    "pyright"
+    "pyright",
+    "ruby_lsp"
 }
 
 local settings = {
