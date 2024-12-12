@@ -1,7 +1,7 @@
 local servers = {
     "sqls",
     "jdtls",
-    "tsserver",
+    "ts_ls",
     "eslint",
     "cssls",
     "html",
