@@ -1,18 +1,14 @@
 local servers = {
-    "sqls",
-    "jdtls",
     "ts_ls",
     "eslint",
     "cssls",
     "html",
     "emmet_ls",
     "lua_ls",
-    "jsonls",
-    "gopls",
     "htmx",
-    "templ",
     "pyright",
-    "ruby_lsp"
+    "ruby_lsp",
+    "rust_analyzer"
 }
 
 local settings = {
