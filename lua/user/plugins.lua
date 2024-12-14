@@ -70,7 +70,7 @@ return packer.startup(function(use)
     use("nvim-telescope/telescope.nvim")
     use("nvim-telescope/telescope-media-files.nvim")
 
-    -- nvim-tree
+    -- neo-tree
     use({
         "nvim-neo-tree/neo-tree.nvim",
         requires = {
@@ -83,7 +83,6 @@ return packer.startup(function(use)
 
     -- Treesitter
     use("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate" })
-    use("vrischmann/tree-sitter-templ", { run = ":TSInstall templ" })
 
     -- Autopairs
     use("windwp/nvim-autopairs")
