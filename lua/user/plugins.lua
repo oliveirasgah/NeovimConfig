@@ -118,9 +118,6 @@ return packer.startup(function(use)
         end,
     })
 
-    -- Toggleterm
-    use "akinsho/toggleterm.nvim"
-
     -- Indent lines
     use "lukas-reineke/indent-blankline.nvim"
 
