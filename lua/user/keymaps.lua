@@ -38,7 +38,7 @@ keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
 -- Open file browser
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":Neotree toggle<CR>", opts)
 
 -- Cursor stay in place after moving line
 keymap("n", "J", "mzJ`z", opts)
@@ -91,6 +91,12 @@ keymap(
     "n",
     "<leader>ff",
     "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
+    opts
+)
+keymap(
+    "n",
+    "<leader>fv",
+    "<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
     opts
 )
 keymap(
