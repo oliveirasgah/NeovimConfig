@@ -123,6 +123,15 @@ return packer.startup(function(use)
     -- Dressing
     use "stevearc/dressing.nvim"
 
+    -- Which-key
+    use({
+        "folke/which-key.nvim",
+        requires = {
+            "echasnovski/mini.icons",
+            "nvim-tree/nvim-web-devicons"
+        }
+    })
+
     -- Noice
     use({
         "folke/noice.nvim",
