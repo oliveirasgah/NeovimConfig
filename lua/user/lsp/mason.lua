@@ -8,6 +8,7 @@ local servers = {
     "htmx",
     "pyright",
     "ruby_lsp",
+    "rubocop",
     "rust_analyzer"
 }
 
