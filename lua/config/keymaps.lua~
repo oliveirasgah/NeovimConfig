@@ -1,0 +1,35 @@
+local keymap = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+-- Press jk fast to exti insert mode
+keymap("i", "jk", "<ESC>", opts)
+keymap("i", "kj", "<ESC>", opts)
+
+-- Neo-tree
+keymap("n", "<leader>e", ":Neotree toggle<CR>", opts)
+
+-- Place searches in center
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
+
+-- Telescope
+keymap(
+    "n",
+    "<leader>ff",
+    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
+    opts
+)
+
+keymap(
+    "n",
+    "<leader>fv",
+    "<cmd>lua require('telescope.builtin').git_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>",
+    opts
+)
+keymap(
+    "n",
+    "<leader>fh",
+    "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown({ previewer = false , hidden = true }))<CR>",
+    opts
+)
+keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
