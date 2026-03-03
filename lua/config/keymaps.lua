@@ -42,7 +42,7 @@ keymap("n", "<leader>vp", ":Gitsigns preview_hunk<CR>")
 keymap("x", "<leader>p", '"_dP', opts)
 
 -- Format code
-keymap("n", "<leader>F", function()
+keymap("n", "<leader>FF", function()
   require("conform").format({
     lsp_fallback = true,
     async = false,
