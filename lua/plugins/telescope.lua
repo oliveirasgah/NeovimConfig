@@ -1,8 +1,5 @@
 return {
   "nvim-telescope/telescope.nvim",
-  dependencies = {
-    "nvim-telescope/telescope-media-files.nvim",
-  },
   keys = {
     {
       "<leader>fp",
@@ -14,8 +11,6 @@ return {
   },
   -- change some options
   opts = function()
-    require("telescope").load_extension("media_files")
-
     local actions = require("telescope.actions")
 
     return {
@@ -88,12 +83,6 @@ return {
 
             ["?"] = actions.which_key,
           },
-        },
-      },
-      extensions = {
-        media_files = {
-          filetypes = { "png", "webp", "jpg", "jpeg" },
-          find_cmd = "rg",
         },
       },
     }
