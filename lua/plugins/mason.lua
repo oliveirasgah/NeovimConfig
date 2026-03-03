@@ -6,11 +6,17 @@ local servers = {
   "htmx",
 }
 
+local tools = {
+  "dart-debug-adapter",
+}
+
 return {
   {
     "mason-org/mason.nvim",
-    {
-      "mason-org/mason-lspconfig.nvim",
+    opts = { ensure_installed = tools },
+  },
+  {
+    "mason-org/mason-lspconfig.nvim",
       priority = 900,
       dependencies = {
         "neovim/nvim-lspconfig",
@@ -38,6 +44,5 @@ return {
           vim.lsp.config(server, opts)
         end
       end,
-    },
   },
 }
