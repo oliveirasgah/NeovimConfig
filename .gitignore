@@ -7,3 +7,7 @@ foo.*
 *.log
 data
 *~
+
+# legacy lazy.nvim artifacts (no longer used)
+lazy-lock.json
+lazyvim.json
