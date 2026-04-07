@@ -1,49 +1,48 @@
--- Options are automatically loaded before lazy.nvim startup
--- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
--- Add any additional options here
-local options = {
-  backup = false, -- creates a backup file
-  clipboard = "unnamedplus", -- allows neovim to access the system clipboard
-  cmdheight = 1, -- more space in the neovim command line for displaying messages
-  completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-  conceallevel = 0, -- so that `` is visible in markdown files
-  confirm = true, -- confirm to save changes before exiting
-  fileencoding = "utf-8", -- the encoding written to a file
-  hlsearch = false, -- highlight all matches on previous search pattern
-  incsearch = true, -- increase search capabilities
-  ignorecase = true, -- ignore case in search patterns
-  pumheight = 10, -- pop up menu height
-  showmode = false, -- we don't need to see things like -- INSERT -- anymore
-  smartcase = true, -- smart case
-  smartindent = true, -- make indenting smarter again
-  splitbelow = true, -- force all horizontal splits to go below current window
-  splitright = true, -- force all vertical splits to go to the right of current window
-  swapfile = false, -- creates a swapfile
-  termguicolors = true, -- set term gui colors (most terminals support this)
-  timeoutlen = 500, -- time to wait for a mapped sequence to complete (in milliseconds)
-  undofile = true, -- enable persistent undo
-  updatetime = 100, -- faster completion (4000ms default)
-  writebackup = false, -- if a file is being edited by another program, it is not allowed to be edited
-  expandtab = true, -- convert tabs to spaces
-  shiftwidth = 2, -- the number of spaces inserted for each indentation
-  tabstop = 2, -- insert 2 spaces for a tab
-  softtabstop = 2, -- insert 2 spaces for a tab
-  cursorline = true, -- highlight the current line
-  number = true, -- set numbered lines
-  relativenumber = true, -- set relative numbered lines
-  numberwidth = 2, -- set number column width to 2 {default 4}
-  signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
-  wrap = false, -- display lines as one long line
-  linebreak = true, -- companion to wrap, don't split words
-  scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
-  sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
-  guifont = "monospace:h17", -- the font used in graphical neovim applications
-  whichwrap = "bs<>[]hl", -- which "horizontal" keys are allowed to travel to prev/next line
-  mouse = "",
-}
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
-for k, v in pairs(options) do
-  vim.opt[k] = v
-end
+-- vim-dadbod-ui
+vim.g.db_ui_use_nerd_fonts = 1
 
-vim.opt.shortmess:append({ W = true, I = true, c = true, C = true })
+local opt = vim.opt
+
+opt.backup = false
+opt.clipboard = "unnamedplus"
+opt.cmdheight = 1
+opt.completeopt = { "menuone", "noselect" }
+opt.conceallevel = 0
+opt.confirm = true
+opt.cursorline = true
+opt.expandtab = true
+opt.fileencoding = "utf-8"
+opt.guifont = "monospace:h17"
+opt.hlsearch = false
+opt.ignorecase = true
+opt.incsearch = true
+opt.linebreak = true
+opt.mouse = ""
+opt.number = true
+opt.numberwidth = 2
+opt.pumheight = 10
+opt.relativenumber = true
+opt.scrolloff = 8
+opt.shiftwidth = 2
+opt.showmode = false
+opt.sidescrolloff = 8
+opt.signcolumn = "yes"
+opt.smartcase = true
+opt.smartindent = true
+opt.softtabstop = 2
+opt.splitbelow = true
+opt.splitright = true
+opt.swapfile = false
+opt.tabstop = 2
+opt.termguicolors = true
+opt.timeoutlen = 500
+opt.undofile = true
+opt.updatetime = 100
+opt.whichwrap = "bs<>[]hl"
+opt.wrap = false
+opt.writebackup = false
+
+opt.shortmess:append({ W = true, I = true, c = true, C = true })
